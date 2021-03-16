@@ -19,7 +19,7 @@ export default class PaymentService {
         this.logger.append("Payment response : " + paymentResponse.code);
 
         if (paymentResponse.code == PaymentResponse.ERROR) {
-            console.log('asdsa adasdsa')
+            console.log('payment response ... '+ paymentResponse)
             this.emailSender.sendEmail(request);
             this.storage.save(request);
         }
